@@ -1,0 +1,217 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LM358 U1
+U 1 1 5D13B99B
+P 2250 2150
+F 0 "U1" H 2250 2350 50  0000 L CNN
+F 1 "LM358" H 2250 1950 50  0000 L CNN
+F 2 "" H 2250 2150 50  0000 C CNN
+F 3 "" H 2250 2150 50  0000 C CNN
+	1    2250 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR4
+U 1 1 5D13BD13
+P 2150 1850
+F 0 "#PWR4" H 2150 1700 50  0001 C CNN
+F 1 "+3.3V" H 2150 1990 50  0000 C CNN
+F 2 "" H 2150 1850 50  0000 C CNN
+F 3 "" H 2150 1850 50  0000 C CNN
+	1    2150 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR2
+U 1 1 5D13BD2D
+P 1050 1800
+F 0 "#PWR2" H 1050 1550 50  0001 C CNN
+F 1 "GNDA" H 1050 1650 50  0000 C CNN
+F 2 "" H 1050 1800 50  0000 C CNN
+F 3 "" H 1050 1800 50  0000 C CNN
+	1    1050 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR1
+U 1 1 5D13BE3A
+P 800 1200
+F 0 "#PWR1" H 800 1050 50  0001 C CNN
+F 1 "+3.3V" H 800 1340 50  0000 C CNN
+F 2 "" H 800 1200 50  0000 C CNN
+F 3 "" H 800 1200 50  0000 C CNN
+	1    800  1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR5
+U 1 1 5D13BE50
+P 2150 2450
+F 0 "#PWR5" H 2150 2200 50  0001 C CNN
+F 1 "GNDA" H 2150 2300 50  0000 C CNN
+F 2 "" H 2150 2450 50  0000 C CNN
+F 3 "" H 2150 2450 50  0000 C CNN
+	1    2150 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5D13C21A
+P 1200 1400
+F 0 "R1" V 1280 1400 50  0000 C CNN
+F 1 "100" V 1200 1400 50  0000 C CNN
+F 2 "" V 1130 1400 50  0000 C CNN
+F 3 "" H 1200 1400 50  0000 C CNN
+	1    1200 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 5D13C2AB
+P 1200 1600
+F 0 "R2" V 1280 1600 50  0000 C CNN
+F 1 "100" V 1200 1600 50  0000 C CNN
+F 2 "" V 1130 1600 50  0000 C CNN
+F 3 "" H 1200 1600 50  0000 C CNN
+	1    1200 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1050 1400 800  1400
+Wire Wire Line
+	800  1400 800  1200
+Wire Wire Line
+	1350 1400 1950 1400
+Wire Wire Line
+	1950 1400 1950 2050
+Wire Wire Line
+	1350 1400 1350 1600
+Wire Wire Line
+	1050 1700 1050 1800
+Wire Wire Line
+	1050 1600 1050 1750
+Connection ~ 1050 1750
+$Comp
+L VDD #IN1
+U 1 1 5D13C4BE
+P 1450 1850
+F 0 "#IN1" H 1450 1700 50  0001 C CNN
+F 1 "VDD" H 1450 2000 50  0000 C CNN
+F 2 "" H 1450 1850 50  0000 C CNN
+F 3 "" H 1450 1850 50  0000 C CNN
+	1    1450 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 5D13C5BA
+P 1600 1950
+F 0 "R3" V 1680 1950 50  0000 C CNN
+F 1 "100" V 1600 1950 50  0000 C CNN
+F 2 "" V 1530 1950 50  0000 C CNN
+F 3 "" H 1600 1950 50  0000 C CNN
+	1    1600 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1450 1950 1450 1850
+Wire Wire Line
+	1750 1950 1950 1950
+Connection ~ 1950 1950
+$Comp
+L GNDA #PWR3
+U 1 1 5D13C682
+P 1700 2800
+F 0 "#PWR3" H 1700 2550 50  0001 C CNN
+F 1 "GNDA" H 1700 2650 50  0000 C CNN
+F 2 "" H 1700 2800 50  0000 C CNN
+F 3 "" H 1700 2800 50  0000 C CNN
+	1    1700 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 2250 1700 2250
+$Comp
+L R R5
+U 1 1 5D13C801
+P 2300 2750
+F 0 "R5" V 2380 2750 50  0000 C CNN
+F 1 "100" V 2300 2750 50  0000 C CNN
+F 2 "" V 2230 2750 50  0000 C CNN
+F 3 "" H 2300 2750 50  0000 C CNN
+	1    2300 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L R R4
+U 1 1 5D13C8A1
+P 1700 2550
+F 0 "R4" V 1780 2550 50  0000 C CNN
+F 1 "100" V 1700 2550 50  0000 C CNN
+F 2 "" V 1630 2550 50  0000 C CNN
+F 3 "" H 1700 2550 50  0000 C CNN
+	1    1700 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2250 1700 2400
+Wire Wire Line
+	1700 2700 1700 2800
+Wire Wire Line
+	1850 2250 1850 2750
+Wire Wire Line
+	1850 2750 2150 2750
+Connection ~ 1850 2250
+Wire Wire Line
+	2450 2750 2550 2750
+Wire Wire Line
+	2550 2750 2550 2150
+Connection ~ 2850 2150
+Wire Wire Line
+	2550 2150 2850 2150
+Connection ~ 1350 1400
+Connection ~ 2550 2150
+$EndSCHEMATC
