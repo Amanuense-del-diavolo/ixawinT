@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/ifdevurandom/Scrivania/coding/progetti/ixawinT/schematics/ixawinT.sch</source>
+    <date>gio 27 giu 2019 13:21:12 CEST</date>
+    <tool>Eeschema 4.0.5+dfsg1-4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ixawinT.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>LM358</value>
+      <libsource lib="linear" part="LM358"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D13B99B</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>100</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D13C21A</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>100</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D13C2AB</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>100</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D13C5BA</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>100</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D13C801</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>100</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D13C8A1</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="linear" part="LM358">
+      <aliases>
+        <alias>LMC6062</alias>
+        <alias>LMC6082</alias>
+        <alias>LM358N</alias>
+        <alias>TL072</alias>
+        <alias>TL082</alias>
+        <alias>NE5532</alias>
+        <alias>4558</alias>
+      </aliases>
+      <description>Dual Op amp (low power)</description>
+      <docs>ns/lm158.pdf</docs>
+      <footprints>
+        <fp>SOIC*</fp>
+        <fp>DIP*</fp>
+        <fp>TSSOP*</fp>
+        <fp>TO-99*</fp>
+        <fp>DSBGA*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM358</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="~" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="linear">
+      <uri>/usr/share/kicad/library/linear.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(R4-Pad1)">
+      <node ref="R5" pin="2"/>
+      <node ref="R4" pin="1"/>
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="2" name="Net-(R5-Pad1)">
+      <node ref="R5" pin="1"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="4" name="+3V3">
+      <node ref="R1" pin="2"/>
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="5" name="VDD">
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="6" name="GNDA">
+      <node ref="R2" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="R4" pin="2"/>
+    </net>
+    <net code="7" name="Net-(R1-Pad1)">
+      <node ref="R2" pin="1"/>
+      <node ref="U1" pin="3"/>
+      <node ref="R3" pin="1"/>
+      <node ref="R1" pin="1"/>
+    </net>
+  </nets>
+</export>
